@@ -1,0 +1,15 @@
+
+<fieldset>
+  <p>street:{{address.street}}</p>
+  <p>city:{{address.city}}</p>
+  <p>Region:{{address.region}}</p>
+  <select [(ngModel)]="address.region">
+    <option *ngFor="let region of regions">{{region}}</option>
+  </select>
+</fieldset>
+<fieldset>
+  <label>State</label>
+  <select [(ngModel)]="address.state">
+    <option *ngFor="let state of states">{{state}}</option>
+  </select>
+</fieldset>

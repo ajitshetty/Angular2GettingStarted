@@ -1,0 +1,13 @@
+<h1>Customers</h1>
+<div>
+  <h1> Hi <button (click)="left()"><</button>{{customer.name}}<button (click)="right()">></button></h1>
+  <p><i>{{customer.name}} is at {{customer.address.street}} in {{customer.address.city}} in {{customer.address.state}} in {{customer.address.region}} </i></p>
+  <label>ngModel</label><input [(ngModel)]="customer.name"><br />
+  <label><input type="checkbox" [(ngModel)]="showAddress"> Show Address </label>
+
+  <div *ngIf="showAddress">
+    <address-comp [address]="customer.address"></address-comp>
+  </div>
+
+  </div>
+
